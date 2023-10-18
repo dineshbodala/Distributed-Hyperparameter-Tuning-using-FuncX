@@ -1,0 +1,26 @@
+PBTREE:
+Best Parameters: {'max_depth': 96, 'max_features': None, 'min_samples_leaf': 0.012820067165291493, 'min_samples_split': 0.17329840739337987, 'n_estimators': 1000}
+RMSE: 1.4279667600562753
+R-squared: 0.9353974365537633
+Time Taken: 0:00:56.224770
+
+Bayesian Optimization:
+RMSE: 0.7388694751435245
+R-squared: [0.98270387]
+Time Taken: 0:01:51.169208
+
+Random Search:
+RMSE: 0.7388409720636735
+R-squared: 0.9827052018751827
+Time Taken: 0:00:18.068415
+
+Hyperband:
+Best Parameters: {'n_estimators': 80, 'max_features': 13, 'max_depth': 14, 'min_samples_split': 3, 'min_samples_leaf': 1, 'criterion': 'mae'}
+Best R-squared: 0.9853643026603037
+Time Taken: 0:00:11.153693
+
+Optimized Random Forest:
+RMSE: 2.9197854696963295
+R-squared: 0.7299056863875073
+Time Taken: 0:02:00.999666
+
