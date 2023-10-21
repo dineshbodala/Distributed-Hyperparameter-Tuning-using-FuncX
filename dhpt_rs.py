@@ -1,6 +1,6 @@
 import itertools
 import numpy as np
-#from globus_compute_sdk import Executor
+from globus_compute_sdk import Executor
 
 endpoint_id1 = 'cc86c44c-12a8-4039-918a-bc64d4ba8599'
 endpoint_id2= 'd241b648-cbae-4562-b978-a438af732024'
@@ -17,8 +17,8 @@ def random_search1(subspaces, num_samples):
     best_r_squared = 0
     best_params = None
 
-    X = pd.read_csv('scaled_features.csv')
-    y = pd.read_csv('y.csv')
+    X = pd.read_csv('/home/edg1/scaled_features.csv')
+    y = pd.read_csv('/home/edg1/y.csv')
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     for subspace in sampled_subspaces:
@@ -53,8 +53,8 @@ def random_search2(subspaces, num_samples):
     best_r_squared = 0
     best_params = None
 
-    X = pd.read_csv('scaled_features.csv')
-    y = pd.read_csv('y.csv')
+    X = pd.read_csv('/home/edg4/scaled_features.csv')
+    y = pd.read_csv('/home/edg4/y.csv')
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     for subspace in sampled_subspaces:
@@ -98,8 +98,16 @@ subspaces = [{'max_depth': str(p[0]),
 total_combinations = len(subspaces)
 subspace1 = subspaces[:total_combinations // 2]
 subspace2 = subspaces[total_combinations // 2:]
-num_samples = 100
+num_samples = 100  
 
 
-print(random_search1(subspaces,200))
-                                         
+with Executor(endpoint_id=endpoint_id1) as gce1, Executor(endpoint_id=endpoint_id2) as gce2:
+
+    future1 = gce1.submit(random_search1,subspace1,num_samples)
+    future2 = gce2.submit(random_search2,subspace2,num_samples)
+
+    result1 = future1.result()
+    result2 = future2.result()
+
+    print(result1)
+    print(result2)

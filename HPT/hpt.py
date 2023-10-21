@@ -80,8 +80,8 @@ def random_search():
     from hyperopt import hp, fmin, tpe, STATUS_OK, Trials
     import pandas as pd
     import numpy as np
-    X = pd.read_csv('/home/edg4/scaled_features.csv')
-    y = pd.read_csv('/home/edg4/y.csv')    
+    X = pd.read_csv('scaled_features.csv')
+    y = pd.read_csv('y.csv')    
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
@@ -293,39 +293,5 @@ def pbtree_hyperparameter_tuning():
 
 
 
-time_diff_arr=[]
-pbtree_start_time = datetime.now()
-print(pbtree_hyperparameter_tuning())
-pbtree_end_time = datetime.now()
-time_diff1= pbtree_end_time - pbtree_start_time
-time_diff_arr.append(str(time_diff1)+'pbtree')
 
-
-bayesian_opt_start_time=datetime.now()
-print(bayesian_opt1())
-bayesian_opt_end_time=datetime.now()
-time_diff2= bayesian_opt_end_time - bayesian_opt_start_time
-time_diff_arr.append(str(time_diff2)+'bayesian_opt')
-
-
-random_search_start_time=datetime.now()
 print(random_search())
-random_search_end_time=datetime.now()
-time_diff3=random_search_end_time - random_search_start_time
-time_diff_arr.append(str(time_diff3)+'random_search')
-
-hyperband_start_time = datetime.now()
-print(hyperband())
-hyperband_end_time = datetime.now()
-time_diff4 = hyperband_end_time - hyperband_start_time
-time_diff_arr.append(str(time_diff_arr)+'hyperband')
-
-optimize_random_forest_start_time= datetime.now()
-print(optimize_random_forest())
-optimize_random_forest_end_time= datetime.now()
-time_diff5 = optimize_random_forest_end_time - optimize_random_forest_start_time
-time_diff_arr.append(str(time_diff5)+'optimize_random_forest')
-
-with open("time_diff_arr.txt", "w") as file:
-    for item in time_diff_arr:
-        file.write("%s\n" % item)
