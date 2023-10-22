@@ -130,7 +130,6 @@ def hyperband():
     from sklearn.metrics import r2_score
     import optuna
     def objective(trial):
-    # Load data
         X = pd.read_csv('scaled_features.csv')
         y = pd.read_csv('y.csv')
 
@@ -152,10 +151,8 @@ def hyperband():
         r_squared = rf.score(X_test, y_test)
         return r_squared
 
-
     study = optuna.create_study(direction='maximize')
     study.optimize(objective, n_trials=100) 
-
 
     best_params = study.best_params
     best_r_squared = study.best_value
