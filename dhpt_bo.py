@@ -2,8 +2,8 @@
 from hyperopt import hp
 from globus_compute_sdk import Executor
 
-endpoint_id1 = 'cc86c44c-12a8-4039-918a-bc64d4ba8599'
-endpoint_id2= 'd241b648-cbae-4562-b978-a438af732024'
+endpoint_id1 = ''
+endpoint_id2= ''
 
 def bayesian_opt1(space):
     import pandas as pd
