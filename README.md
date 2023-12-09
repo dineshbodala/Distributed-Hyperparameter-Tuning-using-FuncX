@@ -40,12 +40,9 @@ python dhpt.py
 
 Follow the prompts to initiate the distributed hyperparameter tuning process.
 
-## Results
-
-The project has demonstrated a significant reduction in hyperparameter tuning time and resource utilization. Detailed results and metrics are available in the project report.
 
 ## Acknowledgments
 
 - The project draws inspiration from simulation frameworks like CloudSim and aims to contribute to the optimization of machine learning workflows.
 
-Feel free to contribute to the project, report issues, or suggest enhancements. Happy tuning!
+
