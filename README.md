@@ -2,8 +2,7 @@
 
 ## Overview
 
-This project introduces a novel approach to hyperparameter tuning for machine learning models using the Distributed Hyperparameter Tuning (DHPT) framework with FuncX. DHPT leverages distributed computing resources to optimize model performance, reduce tuning time, and enhance efficiency. The project draws inspiration from successful simulation frameworks like CloudSim and applies similar principles to the domain of hyperparameter tuning.
-
+This project introduces a novel approach to hyperparameter tuning for machine learning models using the Distributed Hyperparameter Tuning (DHPT) framework with FuncX. DHPT leverages distributed computing resources to optimize model performance, reduce tuning time, and enhance efficiency.
 ## Key Features
 
 - **Distributed Hyperparameter Tuning:** DHPT streamlines the hyperparameter tuning process by distributing tasks across computing endpoints, significantly reducing tuning time.
