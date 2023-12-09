@@ -17,7 +17,7 @@ This project introduces a novel approach to hyperparameter tuning for machine le
 ### Prerequisites
 
 - Python 3.7 or higher
-- FuncX framework installed (refer to [FuncX documentation](https://funcx.org/docs/)).
+- FuncX framework installed (refer to [FuncX documentation](https://funcx.org/)).
 
 ### Installation
 
@@ -25,25 +25,17 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/DHPT-FuncX.git
-cd DHPT-FuncX
-```
 
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
 ```
 
 ### Usage
 
 1. Configure FuncX endpoints: Set up FuncX endpoints on the desired computing resources for distributed execution.
 
-2. Update configuration: Modify the configuration file (`config.yaml`) to specify hyperparameter search space, machine learning model details, and FuncX endpoint configurations.
-
-3. Run DHPT: Execute the DHPT framework by running the main script:
+2. Run DHPT: Execute the DHPT framework by running the main script:
 
 ```bash
-python dhpt_main.py
+python dhpt.py
 ```
 
 Follow the prompts to initiate the distributed hyperparameter tuning process.
@@ -51,10 +43,6 @@ Follow the prompts to initiate the distributed hyperparameter tuning process.
 ## Results
 
 The project has demonstrated a significant reduction in hyperparameter tuning time and resource utilization. Detailed results and metrics are available in the project report.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
