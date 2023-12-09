@@ -40,8 +40,3 @@ python dhpt.py
 Follow the prompts to initiate the distributed hyperparameter tuning process.
 
 
-## Acknowledgments
-
-- The project draws inspiration from simulation frameworks like CloudSim and aims to contribute to the optimization of machine learning workflows.
-
-
